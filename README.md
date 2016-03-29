@@ -81,7 +81,7 @@ All parameters are required unless explicitly stated otherwise. Additionally, or
 
 ### Parameters
 
-*General*
+**General**
 - `dedupratio`
 Specify the deduplication ratio.
 - `dedupunit`
@@ -89,13 +89,13 @@ Specify the deduplication unit size. This value is unchecked. Please see the VDb
 - `compratio`
 Specify the compression ratio.
 
-*Storage Definitions (SDs)*
+**Storage Definitions (SDs)**
 - `luns` (list)
 Specify the logical volumes (LUNs) to be used in the test as a comma-separated list. All LUNs will be used for all workloads. Variable names may be provided (e.g. $LUN1,$LUN2) and specified at runtime when calling VDbench.
 - `openflags` (list)
 Optional. Adds additional flags when opening the LUNs. The flag "o_direct" is provided by default and cannot be removed, as physical device identifiers may not be accessed under Linux without it.
 
-*Workload Definitions (WDs)*
+**Workload Definitions (WDs)**
 - `wdcount`
 The number of non-hotspot workloads to generate. VDbench will automatically split any skew not assigned to hotspots among all remaining workloads.
 - `xfersize`
@@ -107,7 +107,7 @@ The percentage of IOs that should be reads (as opposed to writes). E.g. "rdpct=5
 - `percentdisk`
 Maximum percentage of disk to be used by any and all workloads. No general workload or hotspot will be generated outside the range [0, percentdisk].
 
-*Run Definitions (RDs)*
+**Run Definitions (RDs)**
 - `iorate`
 The number of IOPS to try for.
 - `format`
@@ -119,7 +119,7 @@ The reporting interval in seconds.
 - `threads`
 The number of threads/queue depth.
 
-*Distribution*
+**Distribution**
 - `hotspotnum`
 The number of hotspots to generate.
 - `hotspotcap`
