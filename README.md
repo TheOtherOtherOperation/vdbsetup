@@ -24,7 +24,7 @@ Windows note: pre-built binaries for the scientific Python stack (including NumP
 ## Configuration
 Due to the complexity of VDbench configuration files, VDBSetup's configuration files are also complex.
 
-Running vdbset.py with the --make-template flag will cause the script to output the following example file:
+Running vdbsetup.py --make-template will cause the script to output the following example file:
 
 
 ```
