@@ -127,7 +127,7 @@ The maximum disk capacity to be occupied by all hotspots as a percentage of tota
 - `hotspotiopct`
 The maximum percentage of disk IOs to split among all hotspots.
 - `disttype`
-Specifies the type of hotspot distribution to generate---one of "even", "gaussian", or "uniform".
+Specifies the type of hotspot distribution to generate --- one of "even", "gaussian", or "uniform".
   - "even": generates hotspotnum hotspots each of size hotspotcap/hotspotnum and skew hotspotiopct/hotspotnum.
   - "gaussian": generates a Gaussian (normal) distribution bell curve. Some hotspots will have a greater percentage (skew) of IOs than other hotspots. Hotspot sizes (ranges) will be randomly generated, and a second Gaussian will be used to skew the hotspot starting positions so more hotspots are near the beginning of the disk than the end. Standard deviations for the Gaussians of both the skew and range starting positions must be provided using the "distribution" parameter.
   - "uniform": generates hotspots with uniform random skews and ranges, honoring the "hotspotcap", "hotspotiopct", and "capacity" parameters.
