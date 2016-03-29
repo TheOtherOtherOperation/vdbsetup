@@ -75,7 +75,7 @@ disttype=gaussian
 distribution=0.75,0.5
 ```
 
-Empty lines and comments, those beginning with a hash ("#"), are ignored. Equal signs ("=", major delimiter) separate keys from values. If a parameter accepts multiple values, you may specify it as a comma-delimited (minor delimiter) list. Both the major and minor delimiter used may be overridden using the --major-delimiter and --minor-delimiter command-line flags.
+Empty lines and comments, those beginning with a hash ("#"), are ignored. Equal signs ("=", major delimiter) separate keys from values. If a parameter accepts multiple values, you may specify it as a comma-delimited (minor delimiter) list. Both the major and minor delimiter may be overridden using the --major-delimiter and --minor-delimiter command-line flags.
 
 All parameters are required unless explicitly stated otherwise. Additionally, order matters for certain parameters (most notably, those under "Distribution"). If a parameter has a one-to-one mapping to a VDbench parameter (i.e. "dedupratio", "dedupunit", etc.), very little error checking is performed, so users should take care to check the VDbench specifications for formatting and valid inputs. Also note that, while VDbench does not complain about high-precision floating point values, it ignores fractional components beyond two (2) decimal places.
 
