@@ -23,6 +23,7 @@ wdcount=1
 xfersize=4k
 seekpct=100
 rdpct=75
+percentdisk=100.0
 
 #
 # RDs
@@ -41,4 +42,4 @@ hotspotcap=25
 hotspotiopct=10
 disttype=gaussian
 # Note: only required if disttype=gaussian
-distribution=1,1
+distribution=0.75,0.5

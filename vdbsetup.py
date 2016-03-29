@@ -15,7 +15,6 @@ import statistics
 import textwrap
 import random
 import numpy as np
-import scipy as sp
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import matplotlib.mlab as mlab
@@ -346,7 +345,7 @@ def getArgs(customArgs=None):
             DEFAULT_MAJOR_DELIMITER))
     parser.add_argument("-m", "--minor-delimiter", type=str,
         default=DEFAULT_MINOR_DELIMITER,
-        help='minor delimiter regex used in configuration file (default "{}"")'.format(
+        help='minor delimiter regex used in configuration file (default "{}")'.format(
             DEFAULT_MINOR_DELIMITER))
     parser.add_argument("-c", "--sample-count", type=int,
         default=DEFAULT_MONTE_CARLO_SAMPLES,
