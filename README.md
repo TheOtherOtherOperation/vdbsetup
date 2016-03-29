@@ -132,7 +132,7 @@ Specifies the type of hotspot distribution to generate --- one of "even", "gauss
   - "gaussian": generates a Gaussian (normal) distribution bell curve. Some hotspots will have a greater percentage (skew) of IOs than other hotspots. Hotspot sizes (ranges) will be randomly generated, and a second Gaussian will be used to distribute hotspot starting positions so more hotspots are near the beginning of the disk than the end. Standard deviations for the Gaussians of both the skew and range starting positions must be provided using the "distribution" parameter.
   - "uniform": generates hotspots with uniform random skews and ranges, honoring the "hotspotcap", "hotspotiopct", and "capacity" parameters.
 - `distribution` (list, required if "disttype=gaussian")
-Specifies the standard deviations of the two Gaussian distributions for IO percentage (skew) and range starting position as a pair of floating point values, e.g. "distribution=0.75,0.5" means the Gaussian for the skew will have a standard deviation of 0.75 and the Gaussian for the starting positions will have a standard deviation of 0.5.
+Specifies the standard deviations of the two Gaussian distributions for IO percentage (skew) and range starting position as a pair of floating point values. E.g. "distribution=0.75,0.5" means the Gaussian for the skew will have a standard deviation of 0.75 and the Gaussian for the starting positions will have a standard deviation of 0.5.
 
 ## Usage
 ```
