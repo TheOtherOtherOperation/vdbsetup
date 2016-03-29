@@ -181,7 +181,7 @@ Uses matplotlib to generate a bar chart showing the percentage of IOs assigned t
 - `-gr, --graph-ranges`
 Uses matplotlib to generate a bar chart showing the percentage of IOs assigned to each hotspot on the dependent axis with the hotspots' starting positions as a percentage of the disk on the independent axis and bar widths showing the hotspot sizes. May be specified alongside --graph-skews.
 - `--no-overwrite`
-Prevents overwriting the output file. If the output file already exists, a suffix of the form " (n)", where **n** is an integer, will be appended to the output path. This is especially useful for generating multiple VDbench configurations.
+Prevents overwriting the output file. If the output file already exists, a suffix of the form " (n)", where *n* is an integer, will be appended to the output path. This is especially useful for generating multiple VDbench configurations.
 - `--no-shuffle`
 Disable generation of random permutations of hotspot range-IO rate combinations. Enabling --no-shuffle when generating Gaussian distributions will cause hotspots near the mean of the distribution to have higher IO rates than those near the extrema, preserving the bell curve visible when using --graph-skews. This is generally only useful for debugging.
 - `--header HEADER`
