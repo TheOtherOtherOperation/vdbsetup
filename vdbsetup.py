@@ -596,9 +596,6 @@ def makeGaussianSkews(sigma, sampleCount, hsCount, ioPct):
     # Generate many samples sorted by natural ordering.
     samples = getGaussianSamples(0.0, sigma, sampleCount)
 
-    # Calculate the hotspot bucket boundaries.
-    hsRanges = []
-
     # Determine number of samples in each bucket.
     buckets = getBucketCounts(samples, -1.0, 1.0, hsCount)
 
