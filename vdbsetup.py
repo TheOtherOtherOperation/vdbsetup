@@ -185,7 +185,7 @@ config = OrderedDict({
     "hotspotnum": None,          # Number of hotspots
     "hotspotcap": None,          # Total capacity percent for all hotspots
     "hotspotiopct": None,        # Percent of IO for ALL hotspots
-    "disttype": None             # Distribution type: even, gaussian
+    "disttype": None             # Distribution type: even, gaussian, uniform
 
     #
     # Added inline only if needed
@@ -196,11 +196,10 @@ config = OrderedDict({
     #     - o_direct provided by default as block devices require it
 
     # "distribution": []
-    #     - parameters for the distribution type
+    #     - parameters for the distribution
     #     
     #       Type      | Params
     #       ------------------------------------------
-    #     - even      | WIDTH
     #     - gaussian  | STANDARD_DEVIATION_SKEW, STANDARD_DEVIATION_RANGE
 })
 
