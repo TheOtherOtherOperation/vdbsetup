@@ -214,7 +214,7 @@ class Factory:
         self.params = OrderedDict()
         self.params[name_type] = name
         for key in keys:
-            self.params[key] = None
+            self.addKey(key)
 
     def addKey(self, key):
         self.params[key] = None
