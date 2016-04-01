@@ -123,7 +123,7 @@ messages = {
     "rdpct": 'Key "rdpct" requires percentage in range [0, 100].',
     "percentdisk": 'Key "percentdisk" requires single percentage in range [0, 100].',
     "iorate": 'Key "iorate" requires positive IOPS value.',
-    "format": 'Key "format" must be one of [yes, no].',
+    "format": 'Key "format" must be one of "yes", "no".',
     "threads": 'Key "threads" requires positive integer queue depth.',
     "elapsed": 'Key "elapsed" requires positive integer number of seconds.',
     "interval": 'Key "interval" requires positive integer number of seconds.',
