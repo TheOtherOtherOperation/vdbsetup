@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #
-# vdbsetup.py - script for building VDbench configurations
+# vdbsetup.py - script for building Vdbench configurations
 #
 # Author: Ramon A. Lovato (ramonalovato.com)
 # For: DeepStorage, LLC (deepstorage.net)
@@ -313,7 +313,7 @@ class RDFactory(Factory):
 # Get CLI arguments.
 def getArgs(customArgs=None):
     parser = argparse.ArgumentParser(
-        description="create VDbench hotspot-distribution configuration files")
+        description="create Vdbench hotspot-distribution configuration files")
 
     # Positional.
     parser.add_argument("inPath", type=str, nargs="?",

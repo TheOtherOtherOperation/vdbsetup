@@ -10,19 +10,19 @@ For: DeepStorage, LLC (deepstorage.net)
 Version: 1.0
 
 ## Introduction
-VDBSetup (vdbsetup.py) is a tool for automatically generating VDbench configuration files with complex hotspot distributions.
+VDBSetup (vdbsetup.py) is a tool for automatically generating Vdbench configuration files with complex hotspot distributions.
 
 ## Requirements
 - Python 3.4 or later (http://www.python.org/)
 - NumPy 1.11.0 or later (http://www.numpy.org/)
 - matplotlib 1.5.1 or later (http://matplotlib.org/)
-- Oracle VDbench 5.04.01 or later (http://www.oracle.com/technetwork/server-storage/vdbench-downloads-1901681.html)
+- Oracle Vdbench 5.04.01 or later (http://www.oracle.com/technetwork/server-storage/vdbench-downloads-1901681.html)
 - Java SE Runtime Environment (JRE) 1.6 or later (http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 Windows note: pre-built binaries for the scientific Python stack (including NumPy and matplotlib), as well as other extension libraries, are available from `http://www.lfd.uci.edu/~gohlke/pythonlibs/`.
 
 ## Configuration
-Due to the complexity of VDbench configuration files, VDBSetup's configuration files are also complex.
+Due to the complexity of Vdbench configuration files, VDBSetup's configuration files are also complex.
 
 Running vdbsetup.py --make-template will cause the script to output the following example file:
 
@@ -77,7 +77,7 @@ distribution=0.75,0.5
 
 Empty lines and comments, those beginning with a hash ("#"), are ignored. Equal signs ("=", major delimiter) separate keys from values. If a parameter accepts multiple values, you may specify it as a comma-delimited (minor delimiter) list. Both the major and minor delimiter may be overridden using the --major-delimiter and --minor-delimiter command-line flags.
 
-All parameters are required unless explicitly stated otherwise. Additionally, order matters for certain parameters (most notably, those under "Distribution"). If a parameter has a one-to-one mapping to a VDbench parameter (i.e. "dedupratio", "dedupunit", etc.), very little error checking is performed, so users should take care to check the VDbench specifications for formatting and valid inputs. Also note that, while VDbench does not complain about high-precision floating point values, it ignores fractional components beyond two (2) decimal places.
+All parameters are required unless explicitly stated otherwise. Additionally, order matters for certain parameters (most notably, those under "Distribution"). If a parameter has a one-to-one mapping to a Vdbench parameter (i.e. "dedupratio", "dedupunit", etc.), very little error checking is performed, so users should take care to check the Vdbench specifications for formatting and valid inputs. Also note that, while Vdbench does not complain about high-precision floating point values, it ignores fractional components beyond two (2) decimal places.
 
 ### Parameters
 
@@ -85,19 +85,19 @@ All parameters are required unless explicitly stated otherwise. Additionally, or
 - `dedupratio`
 Specify the deduplication ratio.
 - `dedupunit`
-Specify the deduplication unit size. This value is unchecked. Please see the VDbench documentation for proper formatting.
+Specify the deduplication unit size. This value is unchecked. Please see the Vdbench documentation for proper formatting.
 - `compratio`
 Specify the compression ratio.
 
 **Storage Definitions (SDs)**
 - `luns` (list)
-Specify the logical volumes (LUNs) to be used in the test as a comma-separated list. All LUNs will be used for all workloads. Variable names may be provided (e.g. $LUN1,$LUN2) and specified at runtime when calling VDbench.
+Specify the logical volumes (LUNs) to be used in the test as a comma-separated list. All LUNs will be used for all workloads. Variable names may be provided (e.g. $LUN1,$LUN2) and specified at runtime when calling Vdbench.
 - `openflags` (list)
 Optional. Adds additional flags when opening the LUNs. The flag "o_direct" is provided by default and cannot be removed, as physical device identifiers may not be accessed under Linux without it.
 
 **Workload Definitions (WDs)**
 - `wdcount`
-The number of non-hotspot workloads to generate. VDbench will automatically split any skew not assigned to hotspots among all remaining workloads.
+The number of non-hotspot workloads to generate. Vdbench will automatically split any skew not assigned to hotspots among all remaining workloads.
 - `xfersize`
 The block size to use for IOs. Also affects hotspots.
 - `seekpct`
@@ -141,7 +141,7 @@ usage: vdbsetup.py [-h] [--make-template] [-v] [-gs] [-gr] [--no-overwrite]
                    [-m MINOR_DELIMITER] [-c SAMPLE_COUNT]
                    [inPath] [outPath]
 
-create VDbench hotspot-distribution configuration files
+create Vdbench hotspot-distribution configuration files
 
 positional arguments:
   inPath                where to find the input file
@@ -181,7 +181,7 @@ Uses matplotlib to generate a bar chart showing the percentage of IOs assigned t
 - `-gr, --graph-ranges`
 Uses matplotlib to generate a bar chart showing the percentage of IOs assigned to each hotspot on the dependent axis with the hotspots' starting positions as a percentage of the disk on the independent axis and bar widths showing the hotspot sizes. May be specified alongside --graph-skews.
 - `--no-overwrite`
-Prevents overwriting the output file. If the output file already exists, a suffix of the form " (n)", where *n* is an integer, will be appended to the output path. This is especially useful for generating multiple VDbench configurations.
+Prevents overwriting the output file. If the output file already exists, a suffix of the form " (n)", where *n* is an integer, will be appended to the output path. This is especially useful for generating multiple Vdbench configurations.
 - `--no-shuffle`
 Disable generation of random permutations of hotspot range-IO rate combinations. Enabling --no-shuffle when generating Gaussian distributions will cause hotspots near the mean of the distribution to have higher IO rates than those near the extrema, preserving the bell curve visible when using --graph-skews. This is generally only useful for debugging.
 - `--header HEADER`
