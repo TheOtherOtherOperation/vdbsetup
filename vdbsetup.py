@@ -851,7 +851,7 @@ def checkRangeVals(start, end, percentDisk):
 # @param end End of range.
 def checkRangeConflicts(ranges, start, end):
     for r in ranges:
-        if r[0] <= start < r[1]:
+        if r[0] <= start < r[1] or r[0] <= end < r[1]:
             return True
     return False
 
