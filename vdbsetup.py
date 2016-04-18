@@ -543,7 +543,8 @@ def makeSDs(config):
         sdf = SDFactory()
         sdf.setName("sd{}".format(i))
         sdf.set("lun", lun)
-        sdf.appendOpenFlags(config["openflags"])
+        if "openflags" in config:
+            sdf.appendOpenFlags(config["openflags"])
         sdList.append(sdf.toString() + "\n")
     return sdList
 
