@@ -425,7 +425,7 @@ def parseInput(inPath, major_del=DEFAULT_MAJOR_DELIMITER,
     # Check for incomplete entries.
     incompletes = []
     for k, v in config.items():
-        if not v:
+        if v == None:
             incompletes.append(k)
         if (k == "disttype" and v == "gaussian"
             and not "distribution" in config.keys()):
