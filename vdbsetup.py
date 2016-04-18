@@ -579,6 +579,9 @@ def makeSkews(args, config, graph=False):
         # Graph if requested.
         graphSkews(config, mode, skews)
 
+    for s in skews:
+        assert s > 0, "Size 0 skew generated."
+
     # Shuffle.
     if not args.no_shuffle:
         random.shuffle(skews)
